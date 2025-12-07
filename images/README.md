@@ -11,5 +11,4 @@ Guidelines:
 - Optimize images for web (use WebP where possible, compress PNG/JPEG).
 
 You can also add subfolders like `images/icons/` or `images/hero/` as needed.
-![alt text](bkgroundHunters.png)
-![HR icon](traitpoints.png)
+
