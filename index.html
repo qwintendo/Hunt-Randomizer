@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hunt Randomizer</title>
+  <link rel="icon" href="images/favicon-HR.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Serif:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#"><img src="images/favicon-HR.png" alt="logo" class="logo-img"> Hunt Randomizer</a>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="nav" id="mainNav" aria-label="Main navigation">
+        <a href="#hunters">Hunters</a>
+        <a href="#weapons">Weapons</a>
+        <a href="#traits">Traits</a>
+        <a href="#tools">Tools</a>
+        <a href="#consumables">Consumables</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="randomizer-UI">
+
+    <div class="background"></div>
+    <div class="overlay"></div>
+   
+    <div class="layout">
+
+      <section class="hunter-details">
+          <p class="hunter details">Hunter Details</p>
+          <h2 id= "hunters-name" class="hunterName"></h2>
+      </section>
+
+      <section class="left-column">
+        <div class="traits">
+          <div class="traits-header">
+            <p>Your Hunter's Traits</p>
+          
+            <div class="upgrade-points">
+              <img class="trait-icon" src="https://huntshowdown.wiki.gg/images/thumb/Upgrade_Points.png/16px-Upgrade_Points.png?6909b8" alt="Trait Points Icon">
+              <input type="number" id="trait-points" class="trait-input" min="0" value="10" max="99">
+            </div>
+          </div>
+
+          <div class="traits-grid">
+            <div class="trait-slot"></div><div class="trait-slot"></div><div class="trait-slot"></div><div class="trait-slot"></div><div class="trait-slot"></div>
+            <div class="trait-slot"></div><div class="trait-slot"></div><div class="trait-slot"></div><div class="trait-slot"></div><div class="trait-slot"></div>
+            <div class="trait-slot"></div><div class="trait-slot"></div><div class="trait-slot"></div><div class="trait-slot"></div><div class="trait-slot"></div>
+          </div>
+        </div>
+        <div class="traits-footer">
+            <button id="randomize-traits" class="btn random-btn">Random</button>
+            <label class="qm-toggle">
+              Quartermaster
+              <input type="checkbox" id="force-quartermaster">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        <div class="health">
+          <p>Health</p>
+          <div id="health-segment" class="health-bar"></div>
+        </div>
+        <div class="action-row">
+            <button id="randomize-health" class="btn random-btn">Random</button>
+          </div>
+      </section>
+
+      <section class="center-column">
+        <div class="hunterCard">
+          <img id="hunter-image">
+        </div>
+        <div class="action-row">
+          <button id="randomize-hunter" class="btn random-btn">Random</button>
+        </div>
+      </section>
+
+      <section class="right-column">
+
+        <div class="primary">
+          <p>Primary</p>
+          <div class="loadout-bar" id="primary-weapon"></div>
+        </div>
+        <div class="secondary">
+          <p>Secondary</p>
+          <div class="loadout-bar" id="secondary-weapon"></div>
+        </div>
+        <div class="action-row">
+          <button id="randomize-weapons" class="btn random-btn">Random</button>
+        </div>
+        <p>Tools</p>
+        <div class="tools-grid">
+          <div class="tool-slot"></div><div class="tool-slot"></div><div class="tool-slot"></div><div class="tool-slot"></div>
+        </div>
+        <label class="include-fak">
+          Include First Aid Kit
+          <input type="checkbox" id="force-first-aid" checked>
+          <span class= "checkmark"></span>
+        </label>
+        <p>Consumables</p>
+        <div class="consumables-grid">
+          <div class="consumable-slot"></div><div class="consumable-slot"></div><div class="consumable-slot"></div><div class="consumable-slot"></div>
+        </div>
+        <div class="action-row">
+          <button id="randomize-gear-btn" class="btn random-btn">Random</button>
+        </div>
+
+      </section>
+      <section class= "bottom-center">
+        <button id="randomize-all-btn" class="btn random-btn">Randomize All</button>
+      </section>
+    </div>
+    
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Hunt Randomizer</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
