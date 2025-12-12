@@ -31,11 +31,12 @@
    
     <div class="layout">
 
-      <section class="left-column">
-        <div>
+      <section class="hunter-details">
           <p class="hunter details">Hunter Details</p>
           <h2 id= "hunters-name" class="hunterName"></h2>
-        </div>
+      </section>
+
+      <section class="left-column">
         <div class="traits">
           <div class="traits-header">
             <p>Your Hunter's Traits</p>
@@ -51,7 +52,8 @@
             <div class="trait-slot"></div><div class="trait-slot"></div><div class="trait-slot"></div><div class="trait-slot"></div><div class="trait-slot"></div>
             <div class="trait-slot"></div><div class="trait-slot"></div><div class="trait-slot"></div><div class="trait-slot"></div><div class="trait-slot"></div>
           </div>
-          <div class="traits-footer">
+        </div>
+        <div class="traits-footer">
             <button id="randomize-traits" class="btn random-btn">Random</button>
             <label class="qm-toggle">
               Quartermaster
@@ -59,25 +61,26 @@
               <span class="checkmark"></span>
             </label>
           </div>
-        </div>
         <div class="health">
           <p>Health</p>
           <div id="health-segment" class="health-bar"></div>
-          <button id="randomize-health" class="btn random-btn">Random</button>
         </div>
+        <div class="action-row">
+            <button id="randomize-health" class="btn random-btn">Random</button>
+          </div>
       </section>
 
       <section class="center-column">
         <div class="hunterCard">
           <img id="hunter-image">
         </div>
-        <button id="randomize-hunter" class="btn random-btn">Random</button>
+        <div class="action-row">
+          <button id="randomize-hunter" class="btn random-btn">Random</button>
+        </div>
       </section>
 
       <section class="right-column">
-        <div>
-          <p>Loadout options</p>
-        </div>
+
         <div class="primary">
           <p>Primary</p>
           <div class="loadout-bar" id="primary-weapon"></div>
@@ -86,7 +89,9 @@
           <p>Secondary</p>
           <div class="loadout-bar" id="secondary-weapon"></div>
         </div>
-        <button id="randomize-weapons" class="btn random-btn">Random</button>
+        <div class="action-row">
+          <button id="randomize-weapons" class="btn random-btn">Random</button>
+        </div>
         <p>Tools</p>
         <div class="tools-grid">
           <div class="tool-slot"></div><div class="tool-slot"></div><div class="tool-slot"></div><div class="tool-slot"></div>
@@ -100,7 +105,9 @@
         <div class="consumables-grid">
           <div class="consumable-slot"></div><div class="consumable-slot"></div><div class="consumable-slot"></div><div class="consumable-slot"></div>
         </div>
-        <button id="randomize-gear-btn" class="btn random-btn">Random</button>
+        <div class="action-row">
+          <button id="randomize-gear-btn" class="btn random-btn">Random</button>
+        </div>
 
       </section>
       <section class= "bottom-center">
